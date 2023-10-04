@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand"
+       href="#">NövényBolt</a>
+    <button (click)="isCollapse = !isCollapse"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngbCollapse]="isCollapse"
+         class="collapse navbar-collapse"
+         id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a (click)="isCollapse = true"
+             class="nav-link active"
+             aria-current="page"
+             routerLink="/home"
+             routerLinkActive="active">
+            Rólunk
+          </a>
+        </li>
+        <li class="nav-item">
+          <a (click)="isCollapse = true"
+             class="nav-link active"
+             aria-current="page"
+             routerLink="/plants"
+             routerLinkActive="active">
+            Növényeink
+          </a>
+        </li>
+        <li class="nav-item">
+          <a (click)="isCollapse = true"
+             class="nav-link active"
+             aria-current="page"
+             routerLink="/cart"
+             routerLinkActive="active">
+            Kosár
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
